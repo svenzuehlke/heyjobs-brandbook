@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeyJobs Brandbook – Design System (B2B)</title>
+    <link rel="icon" type="image/png" href="assets/logos/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <img src="assets/logos/heyjobs-primary-logo.png" alt="HeyJobs Logo" class="nav-logo">
+                <div class="nav-links">
+                    <a href="#colors">Farben</a>
+                    <a href="#typography">Typografie</a>
+                    <a href="#spacing">Spacing</a>
+                    <a href="#components">Komponenten</a>
+                    <a href="#logos">Logos</a>
+                    <a href="#tone">Tone of Voice</a>
+                    <a href="#downloads">Downloads</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">HeyJobs Brandbook</h1>
+                <p class="hero-subtitle">Design System & Tone of Voice für B2B-Kommunikation</p>
+                <p class="hero-description">
+                    Das komplette HeyJobs Design System mit allen Farben, Typografie-Specs, 
+                    Komponenten, Logo-Varianten und Tone of Voice Guidelines für professionelle 
+                    B2B-Kommunikation mit Arbeitgebern und Recruitern.
+                </p>
+                <div class="hero-meta">
+                    <span>Version 1.0</span>
+                    <span>•</span>
+                    <span>Letzte Aktualisierung: Juni 2026</span>
+                    <span>•</span>
+                    <span>Made in Berlin</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colors Section -->
+    <section id="colors" class="section">
+        <div class="container">
+            <h2 class="section-title">Farben / Color System</h2>
+            <p class="section-intro">
+                Das HeyJobs Farbsystem basiert auf der <strong>80/7.5/7.5/5 Regel</strong>: 
+                80% WHITE für einen cleanen Look, 7.5% GOLD und 7.5% COSMO für Energie 
+                und Wärme, 5% GRAY 100 für Text und Struktur.
+            </p>
+
+            <!-- Primary Colors -->
+            <h3 class="subsection-title">Primärfarben</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #E8E9EC;"></div>
+                    <div class="color-info">
+                        <h4 class="color-name">WHITE</h4>
+                        <p class="color-usage">80% der Gesamtfläche</p>
+                        <div class="color-codes">
+                            <div class="color-code">
+                                <span class="code-label">HEX</span>
+                                <button class="code-value" onclick="copyToClipboard('#FFFFFF', this)">
+                                    #FFFFFF
+                                    <svg class="copy-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5"/>
+                                        <path d="M3 11V3H11" stroke="currentColor" stroke-width="1.5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="color-code">
+                                <span class="code-label">RGB</span>
+                                <button class="code-value" onclick="copyToClipboard('rgb(255, 255, 255)', this)">
+                                    255, 255, 255
+                                    <svg class="copy-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5"/>
+                                        <path d="M3 11V3H11" stroke="currentColor" stroke-width="1.5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="color-description">Saubere, professionelle Basis. Hintergründe, Cards, Atmungsraum.</p>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #F5B100;"></div>
+                    <div class="color-info">
+                        <h4 class="color-name">GOLD</h4>
+                        <p class="color-usage">7.5% der Gesamtfläche</p>
+                        <div class="color-codes">
+                            <div class="color-code">
+                                <span class="code-label">HEX</span>
+                                <button class="code-value" onclick="copyToClipboard('#F5B100', this)">
+                                    #F5B100
+                                    <svg class="copy-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5"/>
+                                        <path d="M3 11V3H11" stroke="currentColor" stroke-width="1.5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="color-code">
+                                <span class="code-label">RGB</span>
+                                <button class="code-value" onclick="copyToClipboard('rgb(245, 177, 0)', this)">
+                                    245, 177, 0
+                                    <svg class="copy-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5"/>
+                                        <path d="M3 11V3H11" stroke="currentColor" stroke-width="1.5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="color-description">Primäre Akzentfarbe. CTAs, Highlights, Logo-Akzent, Skribble-Unterstreichungen.</p>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #D02879;"></div>
+                    <div class="color-info">
+                        <h4 class="color-name">COSMO</h4>
+                        <p class="color-usage">7.5% der Gesamtfläche</p>
+                        <div class="color-codes">
+                            <div class="color-code">
+                                <span class="code-label">HEX</span>
+                                <button class="code-value" onclick="copyToClipboard('#D02879', this)">
+                                    #D02879
+                                    <svg class="copy-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5"/>
+                                        <path d="M3 11V3H11" stroke="currentColor" stroke-width="1.5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="color-code">
+                                <span class="code-label">RGB</span>
+                                <button class="code-value" onclick="copyToClipboard('rgb(208, 40, 121)', this)">
+                                    208, 40, 121
+                                    <svg class="copy-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5"/>
+                                        <path d="M3 11V3H11" stroke="currentColor" stroke-width="1.5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="color-description">Sekundäre Akzentfarbe. Alternative CTAs, Akzente, Gradient-Komponente.</p>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #181A22;"></div>
+                    <div class="color-info">
+                        <h4 class="color-name">GRAY 100</h4>
+                        <p class="color-usage">5% der Gesamtfläche</p>
+                        <div class="color-codes">
+                            <div class="color-code">
+                                <span class="code-label">HEX</span>
+                                <button class="code-value" onclick="copyToClipboard('#181A22', this)">
+                                    #181A22
+                                    <svg class="copy-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5"/>
+                                        <path d="M3 11V3H11" stroke="currentColor" stroke-width="1.5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="color-code">
+                                <span class="code-label">RGB</span>
+                                <button class="code-value" onclick="copyToClipboard('rgb(24, 26, 34)', this)">
+                                    24, 26, 34
+                                    <svg class="copy-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5"/>
+                                        <path d="M3 11V3H11" stroke="currentColor" stroke-width="1.5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="color-description">Text, hoher Kontrast, Professionalität. Headlines, Body Text, Icons.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gradient -->
+            <h3 class="subsection-title">Brand Gradient</h3>
+            <div class="gradient-demo">
+                <div class="gradient-swatch"></div>
+                <div class="gradient-info">
+                    <h4>HeyJobs Signature Gradient</h4>
+                    <div class="color-code">
+                        <span class="code-label">CSS</span>
+                        <button class="code-value code-value-wide" onclick="copyToClipboard('linear-gradient(90deg, #F5B100 0%, #F6694E 50%, #D02879 100%)', this)">
+                            linear-gradient(90deg, #F5B100 0%, #F6694E 50%, #D02879 100%)
+                            <svg class="copy-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M3 11V3H11" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="gradient-breakdown">
+                        <span><strong>Start:</strong> GOLD #F5B100</span>
+                        <span><strong>Mid:</strong> FIRE #F6694E</span>
+                        <span><strong>End:</strong> COSMO #D02879</span>
+                    </div>
+                    <div class="alert-box">
+                        <strong>⚠️ KRITISCHE REGEL:</strong> FIRE (#F6694E) darf NIEMALS standalone verwendet werden. Ausschließlich als Teil des Gradienten!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gray Scale -->
+            <h3 class="subsection-title">Grau-Skala (UI & Struktur)</h3>
+            <div class="gray-scale">
+                <div class="gray-item">
+                    <div class="gray-swatch" style="background: #FAFAFA; border: 1px solid #E8E9EC;"></div>
+                    <span class="gray-label">GRAY 5</span>
+                    <button class="gray-code" onclick="copyToClipboard('#FAFAFA', this)">#FAFAFA</button>
+                </div>
+                <div class="gray-item">
+                    <div class="gray-swatch" style="background: #F7F7F8;"></div>
+                    <span class="gray-label">GRAY 10</span>
+                    <button class="gray-code" onclick="copyToClipboard('#F7F7F8', this)">#F7F7F8</button>
+                </div>
+                <div class="gray-item">
+                    <div class="gray-swatch" style="background: #E8E9EC;"></div>
+                    <span class="gray-label">GRAY 20</span>
+                    <button class="gray-code" onclick="copyToClipboard('#E8E9EC', this)">#E8E9EC</button>
+                </div>
+                <div class="gray-item">
+                    <div class="gray-swatch" style="background: #C4C6CF;"></div>
+                    <span class="gray-label">GRAY 40</span>
+                    <button class="gray-code" onclick="copyToClipboard('#C4C6CF', this)">#C4C6CF</button>
+                </div>
+                <div class="gray-item">
+                    <div class="gray-swatch" style="background: #8B8D98;"></div>
+                    <span class="gray-label">GRAY 60</span>
+                    <button class="gray-code" onclick="copyToClipboard('#8B8D98', this)">#8B8D98</button>
+                </div>
+                <div class="gray-item">
+                    <div class="gray-swatch" style="background: #4A4C56;"></div>
+                    <span class="gray-label">GRAY 80</span>
+                    <button class="gray-code" onclick="copyToClipboard('#4A4C56', this)">#4A4C56</button>
+                </div>
+                <div class="gray-item">
+                    <div class="gray-swatch" style="background: #181A22;"></div>
+                    <span class="gray-label">GRAY 100</span>
+                    <button class="gray-code" onclick="copyToClipboard('#181A22', this)">#181A22</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Typography Section -->
+    <section id="typography" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Typografie / Typography System</h2>
+            
+            <h3 class="subsection-title">Schriftfamilien</h3>
+            <div class="font-families">
+                <div class="font-card">
+                    <div class="font-specimen" style="font-family: 'Rebond Grotesque', 'IBM Plex Sans', sans-serif; font-weight: 700; font-size: 48px; line-height: 1.1;">
+                        Performance Recruiting
+                    </div>
+                    <h4 class="font-name">Rebond Grotesque Bold</h4>
+                    <p class="font-usage"><strong>Verwendung:</strong> Headlines, Sublines, Statement-Texte</p>
+                    <div class="font-specs">
+                        <span><strong>Weight:</strong> Bold (einziger verfügbarer Weight)</span>
+                        <span><strong>Line-height:</strong> 100–130%</span>
+                        <span><strong>Besonderheit:</strong> Scribble-Unterstreichungen erlaubt</span>
+                    </div>
+                    <div class="font-download">
+                        <a href="https://github.com/svenzuehlke/heyjobs-brandbook/tree/main/assets/fonts" target="_blank" class="download-link">
+                            Fonts im GitHub Repo →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="font-card">
+                    <div class="font-specimen" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 400; font-size: 18px; line-height: 1.5;">
+                        Unsere Algorithmen optimieren sich mit jeder Bewerbung – für sinkende Kosten und steigende Qualität der Kandidat:innen.
+                    </div>
+                    <h4 class="font-name">IBM Plex Sans</h4>
+                    <p class="font-usage"><strong>Verwendung:</strong> Body Text, UI-Elemente, längere Texte</p>
+                    <div class="font-specs">
+                        <span><strong>Weights:</strong> Regular (400), Semibold (600), Bold (700)</span>
+                        <span><strong>Line-height:</strong> 150%</span>
+                        <span><strong>Source:</strong> Google Fonts (Open Source)</span>
+                    </div>
+                    <div class="font-download">
+                        <a href="https://fonts.google.com/specimen/IBM+Plex+Sans" target="_blank" class="download-link">
+                            Google Fonts →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Typografie-Hierarchie</h3>
+            <div class="type-scale">
+                <div class="type-example" style="font-family: 'Rebond Grotesque', 'IBM Plex Sans', sans-serif; font-weight: 700; font-size: 64px; line-height: 1.1;">
+                    H1 Hero Headline
+                    <span class="type-spec">Rebond Grotesque Bold, 56-72px, Line-height 100-110%</span>
+                </div>
+                <div class="type-example" style="font-family: 'Rebond Grotesque', 'IBM Plex Sans', sans-serif; font-weight: 700; font-size: 48px; line-height: 1.15;">
+                    H2 Section Headline
+                    <span class="type-spec">Rebond Grotesque Bold, 40-56px, Line-height 110-120%</span>
+                </div>
+                <div class="type-example" style="font-family: 'Rebond Grotesque', 'IBM Plex Sans', sans-serif; font-weight: 700; font-size: 36px; line-height: 1.25;">
+                    H3 Subsection Headline
+                    <span class="type-spec">Rebond Grotesque Bold, 32-40px, Line-height 120-130%</span>
+                </div>
+                <div class="type-example" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 24px; line-height: 1.3;">
+                    H4 Card Headline
+                    <span class="type-spec">IBM Plex Sans Semibold, 24-32px, Line-height 120-130%</span>
+                </div>
+                <div class="type-example" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 400; font-size: 18px; line-height: 1.5;">
+                    Large Body: Intro-Texte und wichtige Erklärungen mit optimaler Lesbarkeit für längere Absätze.
+                    <span class="type-spec">IBM Plex Sans Regular, 18-20px, Line-height 150%</span>
+                </div>
+                <div class="type-example" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 1.5;">
+                    Body Standard: Der Standard-Fließtext für alle regulären Inhalte, Listen und Beschreibungen.
+                    <span class="type-spec">IBM Plex Sans Regular, 16px, Line-height 150%</span>
+                </div>
+                <div class="type-example" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 400; font-size: 14px; line-height: 1.5; color: #8B8D98;">
+                    Small Body / Caption: Für Metadaten, Captions und Fußnoten.
+                    <span class="type-spec">IBM Plex Sans Regular, 14px, Line-height 150%, GRAY 60</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spacing Section -->
+    <section id="spacing" class="section">
+        <div class="container">
+            <h2 class="section-title">Spacing System (8px Grid)</h2>
+            <p class="section-intro">
+                Alle Spacings basieren auf 8px-Inkrementen. Niemals zufällige Werte – immer aus der definierten Skala wählen.
+            </p>
+
+            <div class="spacing-grid">
+                <div class="spacing-item">
+                    <div class="spacing-visual" style="width: 4px; height: 4px;"></div>
+                    <div class="spacing-info">
+                        <strong>xs</strong>
+                        <span>4px</span>
+                        <p>Icon-Text-Gap</p>
+                    </div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-visual" style="width: 8px; height: 8px;"></div>
+                    <div class="spacing-info">
+                        <strong>sm</strong>
+                        <span>8px</span>
+                        <p>Label-Input</p>
+                    </div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-visual" style="width: 16px; height: 16px;"></div>
+                    <div class="spacing-info">
+                        <strong>md</strong>
+                        <span>16px</span>
+                        <p>Elements in Cards</p>
+                    </div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-visual" style="width: 24px; height: 24px;"></div>
+                    <div class="spacing-info">
+                        <strong>lg</strong>
+                        <span>24px</span>
+                        <p>Sections in Cards</p>
+                    </div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-visual" style="width: 32px; height: 32px;"></div>
+                    <div class="spacing-info">
+                        <strong>xl</strong>
+                        <span>32px</span>
+                        <p>Card Padding</p>
+                    </div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-visual" style="width: 48px; height: 48px;"></div>
+                    <div class="spacing-info">
+                        <strong>2xl</strong>
+                        <span>48px</span>
+                        <p>Section Spacing</p>
+                    </div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-visual" style="width: 64px; height: 64px;"></div>
+                    <div class="spacing-info">
+                        <strong>3xl</strong>
+                        <span>64px</span>
+                        <p>Large Sections</p>
+                    </div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-visual" style="width: 96px; height: 96px;"></div>
+                    <div class="spacing-info">
+                        <strong>4xl</strong>
+                        <span>96px</span>
+                        <p>Hero Padding</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components Section -->
+    <section id="components" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Komponenten / Components</h2>
+
+            <h3 class="subsection-title">Buttons</h3>
+            <div class="component-showcase">
+                <div class="component-example">
+                    <button class="btn btn-primary">Jetzt beraten lassen</button>
+                    <p class="component-label">Primary Button (GOLD)</p>
+                    <pre class="component-code">Background: #F5B100
+Text: #181A22, IBM Plex Sans Semibold, 16px
+Padding: 14px 32px
+Border-radius: 4px</pre>
+                </div>
+
+                <div class="component-example">
+                    <button class="btn btn-secondary">Mehr erfahren</button>
+                    <p class="component-label">Secondary Button (Outline)</p>
+                    <pre class="component-code">Background: Transparent
+Border: 2px solid #181A22
+Text: #181A22
+Hover: Background #181A22, Text #FFFFFF</pre>
+                </div>
+
+                <div class="component-example">
+                    <button class="btn btn-gradient">Termin buchen</button>
+                    <p class="component-label">Gradient Button (Special)</p>
+                    <pre class="component-code">Background: linear-gradient(90deg, #F5B100, #F6694E, #D02879)
+Text: #FFFFFF, IBM Plex Sans Bold, 16px
+Usage: Hero-CTAs only (selten!)</pre>
+                </div>
+
+                <div class="component-example">
+                    <a href="#" class="btn btn-link">Zum Wissensportal →</a>
+                    <p class="component-label">Link Button (Tertiary)</p>
+                    <pre class="component-code">Background: Transparent
+Text: #181A22
+Hover: Color #D02879, underline</pre>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Cards</h3>
+            <div class="component-showcase">
+                <div class="card">
+                    <h4>Standard Card</h4>
+                    <p>Über 70.000 erfolgreich besetzte Stellen seit 2016. Performance Recruiting mit messbaren Ergebnissen.</p>
+                    <pre class="component-code">Background: #FFFFFF
+Border-radius: 12px
+Shadow: 0 2px 12px rgba(24,26,34,0.08)
+Padding: 32px
+Hover: Lift + stronger shadow</pre>
+                </div>
+
+                <div class="card card-accent">
+                    <h4>Card mit Accent-Border</h4>
+                    <p>Sinkende Cost-per-Hire (CPH) über die Laufzeit durch lernende Algorithmen.</p>
+                    <pre class="component-code">Border-top: 4px solid #F5B100 (GOLD)
+Für Highlights und Feature-Cards</pre>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Form Elements</h3>
+            <div class="component-showcase">
+                <div class="form-example">
+                    <label class="form-label">E-Mail-Adresse</label>
+                    <input type="email" class="form-input" placeholder="ihr.name@unternehmen.de">
+                </div>
+
+                <div class="form-example">
+                    <label class="form-label">Unternehmensgröße</label>
+                    <select class="form-select">
+                        <option>Bitte wählen...</option>
+                        <option>1-50 Mitarbeiter:innen</option>
+                        <option>51-250 Mitarbeiter:innen</option>
+                        <option>251+ Mitarbeiter:innen</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logos Section -->
+    <section id="logos" class="section">
+        <div class="container">
+            <h2 class="section-title">Logos & Brand Assets</h2>
+
+            <h3 class="subsection-title">Logo-Varianten</h3>
+            <div class="logo-grid">
+                <div class="logo-item">
+                    <div class="logo-preview" style="background: #FFFFFF;">
+                        <img src="assets/logos/heyjobs-primary-logo.png" alt="HeyJobs Primary Logo">
+                    </div>
+                    <h4>Primary Logo</h4>
+                    <p>"job" in GOLD (#F5B100), Rest in GRAY 100. Standard auf hellen Hintergründen.</p>
+                    <a href="assets/logos/heyjobs-primary-logo.png" download class="download-btn">PNG Download</a>
+                </div>
+
+                <div class="logo-item">
+                    <div class="logo-preview" style="background: #181A22;">
+                        <img src="assets/logos/heyjobs-logo-white.png" alt="HeyJobs White Logo">
+                    </div>
+                    <h4>Logo White</h4>
+                    <p>Für dunkle Hintergründe, Gradients, Foto-Overlays.</p>
+                    <a href="assets/logos/heyjobs-logo-white.png" download class="download-btn">PNG Download</a>
+                </div>
+
+                <div class="logo-item">
+                    <div class="logo-preview" style="background: #FFFFFF;">
+                        <img src="assets/logos/heyjobs-secondary-gold.png" alt="HeyJobs Secondary GOLD">
+                    </div>
+                    <h4>Secondary Logo (GOLD)</h4>
+                    <p>Alternative Variante mit GOLD-Akzent.</p>
+                    <a href="assets/logos/heyjobs-secondary-gold.png" download class="download-btn">PNG Download</a>
+                </div>
+
+                <div class="logo-item">
+                    <div class="logo-preview" style="background: #FFFFFF;">
+                        <img src="assets/logos/heyjobs-secondary-cosmo.png" alt="HeyJobs Secondary COSMO">
+                    </div>
+                    <h4>Secondary Logo (COSMO)</h4>
+                    <p>Alternative Variante mit COSMO-Akzent.</p>
+                    <a href="assets/logos/heyjobs-secondary-cosmo.png" download class="download-btn">PNG Download</a>
+                </div>
+            </div>
+
+            <div class="logo-rules">
+                <h3 class="subsection-title">Logo-Regeln</h3>
+                <div class="rules-grid">
+                    <div class="rule-item rule-do">
+                        <h4>✅ Do's</h4>
+                        <ul>
+                            <li>Minimum 120px Breite (digital)</li>
+                            <li>16px Clear Space ringsum</li>
+                            <li>Prominent platzieren (meist oben links)</li>
+                            <li>White-Version auf dunklen Backgrounds</li>
+                        </ul>
+                    </div>
+                    <div class="rule-item rule-dont">
+                        <h4>❌ Don'ts</h4>
+                        <ul>
+                            <li>Niemals strecken oder stauchen</li>
+                            <li>Keine Effekte (Schatten, Glow, 3D)</li>
+                            <li>Nicht drehen oder kippen</li>
+                            <li>Nicht auf unruhigen Hintergründen</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tone of Voice Section -->
+    <section id="tone" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Tone of Voice (B2B)</h2>
+            <p class="section-intro">
+                Die HeyJobs B2B-Kommunikation richtet sich an HR-Professionals, Recruiter und 
+                Geschäftsführer. Professionell und datengetrieben, aber persönlich und nahbar.
+            </p>
+
+            <h3 class="subsection-title">Die 5 Säulen</h3>
+            <div class="tone-pillars">
+                <div class="pillar">
+                    <div class="pillar-number">1</div>
+                    <h4>Professionell & Kompetent</h4>
+                    <p>Datengetrieben: Zahlen, Fakten, Metriken. Expertise demonstrieren, nicht behaupten.</p>
+                    <div class="example">
+                        <strong>✅ Gut:</strong> "Über 70.000 erfolgreich besetzte Stellen seit 2016"
+                    </div>
+                    <div class="example bad">
+                        <strong>❌ Schlecht:</strong> "Wir sind die Besten!"
+                    </div>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-number">2</div>
+                    <h4>Lösungsorientiert</h4>
+                    <p>Probleme erkennen, Lösungen anbieten. Konkret, nicht abstrakt.</p>
+                    <div class="example">
+                        <strong>✅ Gut:</strong> "Viele Bewerbungen, kaum einstellbare Kandidat:innen? Wir ändern das."
+                    </div>
+                    <div class="example bad">
+                        <strong>❌ Schlecht:</strong> "Synergistische Talent-Acquisition-Transformation"
+                    </div>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-number">3</div>
+                    <h4>Persönlich (trotz Sie-Form)</h4>
+                    <p>Sie-Ansprache immer. Direkter Kontakt: "Wir" und "Sie", nicht "man" oder "Unternehmen".</p>
+                    <div class="example">
+                        <strong>✅ Gut:</strong> "Sprechen Sie mit uns!"
+                    </div>
+                    <div class="example bad">
+                        <strong>❌ Schlecht:</strong> "Man kann Kontakt aufnehmen..."
+                    </div>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-number">4</div>
+                    <h4>Transparent & Ehrlich</h4>
+                    <p>Klare Kommunikation von Kosten und Prozessen. Realistische Erwartungen setzen.</p>
+                    <div class="example">
+                        <strong>✅ Gut:</strong> "10,08 € pro Bewerbung (CPA)"
+                    </div>
+                    <div class="example bad">
+                        <strong>❌ Schlecht:</strong> "Unschlagbare Preise!"
+                    </div>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-number">5</div>
+                    <h4>Performance-Fokussiert</h4>
+                    <p>ROI und Ergebnisse in den Vordergrund. Konkrete Metriken (CPH, CPA, Time-to-Hire).</p>
+                    <div class="example">
+                        <strong>✅ Gut:</strong> "Time-to-Hire von 30 auf 10,5 Tage gesenkt"
+                    </div>
+                    <div class="example bad">
+                        <strong>❌ Schlecht:</strong> "Bessere Ergebnisse als andere"
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Verbotene Buzzwords</h3>
+            <div class="buzzwords">
+                <span class="buzzword">Disruptiv</span>
+                <span class="buzzword">Synergien schaffen</span>
+                <span class="buzzword">Best-in-class</span>
+                <span class="buzzword">Cutting-edge</span>
+                <span class="buzzword">Paradigmenwechsel</span>
+                <span class="buzzword">Ganzheitlicher Ansatz</span>
+                <span class="buzzword">Next-Generation</span>
+                <span class="buzzword">Game-changer</span>
+            </div>
+            <p class="buzzword-note">
+                <strong>Warum?</strong> Diese Begriffe klingen hohl und unglaubwürdig. 
+                HeyJobs setzt auf harte Fakten statt Marketing-Floskeln.
+            </p>
+        </div>
+    </section>
+
+    <!-- Downloads Section -->
+    <section id="downloads" class="section">
+        <div class="container">
+            <h2 class="section-title">Downloads & Assets</h2>
+            
+            <div class="download-grid">
+                <div class="download-card">
+                    <div class="download-icon">📄</div>
+                    <h3>Design System (PDF)</h3>
+                    <p>Komplettes Design System als PDF zum Download</p>
+                    <a href="../heyjobs-design-system-b2b.md" download class="download-btn">Markdown Download</a>
+                </div>
+
+                <div class="download-card">
+                    <div class="download-icon">🔤</div>
+                    <h3>Fonts</h3>
+                    <p>Rebond Grotesque Bold (im GitHub Repo verfügbar)</p>
+                    <a href="https://github.com/svenzuehlke/heyjobs-brandbook/tree/main/assets/fonts" target="_blank" class="download-btn">Zum GitHub Repo</a>
+                </div>
+
+                <div class="download-card">
+                    <div class="download-icon">🎨</div>
+                    <h3>Logos (Alle Varianten)</h3>
+                    <p>Primary, White, Secondary GOLD & COSMO</p>
+                    <a href="https://github.com/svenzuehlke/heyjobs-brandbook/tree/main/assets/logos" target="_blank" class="download-btn">Zum GitHub Repo</a>
+                </div>
+
+                <div class="download-card">
+                    <div class="download-icon">💬</div>
+                    <h3>Tone of Voice Guidelines</h3>
+                    <p>Komplette B2B Kommunikations-Richtlinien</p>
+                    <a href="../heyjobs-design-system-b2b.md" download class="download-btn">Markdown Download</a>
+                </div>
+            </div>
+
+            <div class="github-cta">
+                <h3>GitHub Repository</h3>
+                <p>Alle Assets, Fonts, Logos und das komplette Brandbook sind verfügbar auf GitHub:</p>
+                <a href="https://github.com/svenzuehlke/heyjobs-brandbook" target="_blank" class="btn btn-primary">
+                    → GitHub Repository ansehen
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logos/heyjobs-logo-white.png" alt="HeyJobs Logo" style="height: 32px;">
+                </div>
+                <div class="footer-meta">
+                    <p>HeyJobs Brandbook Version 1.0 • Letzte Aktualisierung: Juni 2026</p>
+                    <p>Made in Berlin • DSGVO-konform • Server in Deutschland</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.heyjobs.co/recruiting/impressum" target="_blank">Impressum</a>
+                    <a href="https://www.heyjobs.co/recruiting/datenschutz" target="_blank">Datenschutz</a>
+                    <a href="https://github.com/svenzuehlke/heyjobs-brandbook" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
