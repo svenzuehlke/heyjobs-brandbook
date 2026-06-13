@@ -84,11 +84,50 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe cards and components
-document.querySelectorAll('.color-card, .card, .font-card, .logo-item, .download-card').forEach(el => {
+document.querySelectorAll('.color-card, .card, .font-card, .logo-item, .download-card, .jobster-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
+});
+
+// Scribbles — draw-line & draw-circle (Webflow-Konvention)
+// Findet Spans mit .draw-line / .draw-circle, injiziert das SVG
+// und zeichnet den Stroke ein, sobald das Element im Viewport ist.
+const SCRIBBLE_PATHS = {
+    line: {
+        viewBox: '0 0 200 18',
+        d: 'M4 10 C 50 16, 100 4, 148 10 S 188 13, 196 7'
+    },
+    circle: {
+        viewBox: '0 0 200 74',
+        d: 'M52 11 C 95 3, 152 6, 179 18 C 199 28, 201 45, 178 56 C 148 70, 82 72, 47 62 C 15 53, 2 38, 17 25 C 27 16, 46 11, 68 9'
+    }
+};
+
+const drawObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-drawn');
+            drawObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.6 });
+
+const SVG_NS = 'http://www.w3.org/2000/svg';
+document.querySelectorAll('.draw-line, .draw-circle').forEach(el => {
+    if (el.querySelector('svg')) return; // bereits injiziert
+    const cfg = el.classList.contains('draw-circle') ? SCRIBBLE_PATHS.circle : SCRIBBLE_PATHS.line;
+    const svg = document.createElementNS(SVG_NS, 'svg');
+    svg.setAttribute('viewBox', cfg.viewBox);
+    svg.setAttribute('preserveAspectRatio', 'none');
+    svg.setAttribute('aria-hidden', 'true');
+    const path = document.createElementNS(SVG_NS, 'path');
+    path.setAttribute('d', cfg.d);
+    path.setAttribute('pathLength', '100');
+    svg.appendChild(path);
+    el.appendChild(svg);
+    drawObserver.observe(el);
 });
 
 console.log('🎨 HeyJobs Brandbook loaded successfully');
