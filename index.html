@@ -23,6 +23,7 @@
                     <a href="#components">Komponenten</a>
                     <a href="#logos">Logos</a>
                     <a href="#jobster">Jobster</a>
+                    <a href="#bildsprache">Bildsprache</a>
                     <a href="#tone">Tone of Voice</a>
                     <a href="#downloads">Downloads</a>
                 </div>
@@ -316,7 +317,7 @@
                     </div>
                     <p class="component-label">Unterstreichung — <code>draw-line</code></p>
                     <pre class="component-code">&lt;span class="draw-line"&gt;einstellbare&lt;/span&gt;
-Stroke: GOLD #F5B100, 0.055em, runde Kappen
+Stroke: GOLD #F5B100, 0.075em, runde Kappen
 Animation: Draw-in 0.7s, Ease cubic-bezier(0.32,0.72,0,1)</pre>
                 </div>
 
@@ -326,7 +327,7 @@ Animation: Draw-in 0.7s, Ease cubic-bezier(0.32,0.72,0,1)</pre>
                     </div>
                     <p class="component-label">Einkreisung — <code>draw-circle</code></p>
                     <pre class="component-code">&lt;span class="draw-circle"&gt;&gt;5.000&lt;/span&gt;
-Stroke: GOLD #F5B100, 0.055em, offene Ellipse mit Überlappung
+Stroke: GOLD #F5B100, 0.075em, offene Ellipse mit Überlappung
 Animation: Draw-in 0.9s, Ease cubic-bezier(0.32,0.72,0,1)</pre>
                 </div>
             </div>
@@ -571,18 +572,11 @@ Hover: 3D-Flip des Texts, kein Hintergrundwechsel</pre>
                     <p>Über 70.000 erfolgreich besetzte Stellen seit 2016. Performance Recruiting mit messbaren Ergebnissen.</p>
                     <pre class="component-code">Background: #FFFFFF
 Border-radius: 12px
-Shadow: 0 2px 12px rgba(24,26,34,0.08)
+Background: var(--neutral-100) = #F8F8FA
+Border: 1px solid var(--neutral-200) = #EDEEF3
 Padding: 32px
-Hover: Lift + stronger shadow</pre>
-                </div>
-
-                <div class="card card-accent">
-                    <h4>Card mit Accent-Border</h4>
-                    <p>Sinkende Cost-per-Hire (CPH) über die Laufzeit durch lernende Algorithmen.</p>
-                    <pre class="component-code">Border-top: 4px solid #F5B100 (GOLD)
-Für Highlights und Feature-Cards</pre>
-                </div>
-            </div>
+Border-radius: 12px</pre>
+                </div></div>
 
             <h3 class="subsection-title">Form Elements</h3>
             <div class="component-showcase">
@@ -862,6 +856,93 @@ Für Highlights und Feature-Cards</pre>
     </section>
 
     <!-- Downloads Section -->
+    <!-- Bildsprache Section -->
+    <section id="bildsprache" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Bildsprache</h2>
+            <p class="section-intro">
+                Authentisch, nah am Menschen, in Action. Echte Situationen am Arbeitsplatz —
+                keine gestellten Stock-Fotos. Branchen-spezifische Perspektiven,
+                Snapshot-Charakter. Die Bilder vermitteln: Hier arbeiten echte Menschen.
+            </p>
+
+            <div class="imagery-grid">
+                <div class="imagery-item">
+                    <div class="imagery-preview">
+                        <img src="assets/images/Branchen - Beratung & Recht.png" alt="Branche Beratung & Recht" loading="lazy">
+                    </div>
+                    <p class="imagery-label">Beratung & Recht</p>
+                </div>
+                <div class="imagery-item">
+                    <div class="imagery-preview">
+                        <img src="assets/images/Branchen - Einzelhandel.png" alt="Branche Einzelhandel" loading="lazy">
+                    </div>
+                    <p class="imagery-label">Einzelhandel</p>
+                </div>
+                <div class="imagery-item">
+                    <div class="imagery-preview">
+                        <img src="assets/images/Branchen - Gesundheitswesen.png" alt="Branche Gesundheitswesen" loading="lazy">
+                    </div>
+                    <p class="imagery-label">Gesundheitswesen</p>
+                </div>
+                <div class="imagery-item">
+                    <div class="imagery-preview">
+                        <img src="assets/images/Branchen - Handwerk.png" alt="Branche Handwerk" loading="lazy">
+                    </div>
+                    <p class="imagery-label">Handwerk</p>
+                </div>
+                <div class="imagery-item">
+                    <div class="imagery-preview">
+                        <img src="assets/images/Branchen - Hotel & Gastro.png" alt="Branche Hotel & Gastro" loading="lazy">
+                    </div>
+                    <p class="imagery-label">Hotel & Gastro</p>
+                </div>
+                <div class="imagery-item">
+                    <div class="imagery-preview">
+                        <img src="assets/images/Branchen - Öffentlicher Dienst.png" alt="Branche Öffentlicher Dienst" loading="lazy">
+                    </div>
+                    <p class="imagery-label">Öffentlicher Dienst</p>
+                </div>
+                <div class="imagery-item">
+                    <div class="imagery-preview">
+                        <img src="assets/images/Branchen - Transport & Logistik.png" alt="Branche Transport & Logistik" loading="lazy">
+                    </div>
+                    <p class="imagery-label">Transport & Logistik</p>
+                </div>
+                <div class="imagery-item">
+                    <div class="imagery-preview">
+                        <img src="assets/images/Branchen - Vertrieb.png" alt="Branche Vertrieb" loading="lazy">
+                    </div>
+                    <p class="imagery-label">Vertrieb</p>
+                </div>
+            </div>
+
+            <div class="logo-rules">
+                <div class="rules-grid">
+                    <div class="rule-item rule-do">
+                        <h4>✅ Bildsprache-Prinzipien</h4>
+                        <ul>
+                            <li>Authentisch & nah am Menschen — echte Arbeitssituationen</li>
+                            <li>In Action — Tätigkeiten und Momente, keine Posen</li>
+                            <li>Snapshot-Charakter — leicht ungestellt, natürlich und lebendig</li>
+                            <li>Branchen-spezifisch — immer zum Kontext des Unternehmens passend</li>
+                        </ul>
+                    </div>
+                    <div class="rule-item rule-dont">
+                        <h4>❌ Vermeiden</h4>
+                        <ul>
+                            <li>Stock-Foto-Ästhetik — zu glatt, zu perfekt, zu gestellt</li>
+                            <li>Reine Produktfotos ohne Menschen</li>
+                            <li>Übermäßige Filter oder schwere Bearbeitung</li>
+                            <li>Branchenfremde Motive für generische Aussagen</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloads Section -->
     <section id="downloads" class="section">
         <div class="container">
             <h2 class="section-title">Downloads & Assets</h2>
@@ -899,9 +980,20 @@ Für Highlights und Feature-Cards</pre>
             <div class="github-cta">
                 <h3>GitHub Repository</h3>
                 <p>Alle Assets, Fonts, Logos und das komplette Brandbook sind verfügbar auf GitHub:</p>
-                <a href="https://github.com/svenzuehlke/heyjobs-brandbook" target="_blank" class="btn btn-primary">
-                    → GitHub Repository ansehen
-                </a>
+                <a href="https://github.com/svenzuehlke/heyjobs-brandbook" target="_blank" class="button-005" data-wf--button--variant="github">
+                        <span class="button-005__text-wrap">
+                            <span class="button-005__text is--default">GitHub Repository ansehen</span>
+                            <span class="button-005__text is--hover" aria-hidden="true">GitHub Repository ansehen</span>
+                        </span>
+                        <span class="button-005__icon-wrap">
+                            <span class="button-005__icon-inner is--default">
+                                <svg class="button-005__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </span>
+                            <span class="button-005__icon-inner is--hover" aria-hidden="true">
+                                <svg class="button-005__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </span>
+                        </span>
+                    </a>
             </div>
         </div>
     </section>
