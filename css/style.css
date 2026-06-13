@@ -1,3 +1,17 @@
+/* ============================================================
+   Fonts — Rebond Grotesque (selbst gehostet aus assets/fonts/)
+   Ohne diese Deklaration fällt der Browser auf IBM Plex zurück.
+   ============================================================ */
+@font-face {
+    font-family: 'Rebond Grotesque';
+    src: url('../assets/fonts/ESRebondGrotesque-Bold.woff2') format('woff2'),
+         url('../assets/fonts/ESRebondGrotesque-Bold.woff') format('woff'),
+         url('../assets/fonts/ESRebondGrotesque-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Reset & Base Styles */
 * {
     margin: 0;
@@ -29,6 +43,43 @@
     --spacing-2xl: 48px;
     --spacing-3xl: 64px;
     --spacing-4xl: 96px;
+
+    /* ============================================================
+       Tokens aus heyjobs-new.webflow.io (Webflow-Variablen, 1:1)
+       ============================================================ */
+    --base-color-brand--primary: #d02879;      /* COSMO */
+    --base-color-brand--secondary: #f5b100;    /* GOLD */
+    --base-color-brand--tertiary: #4751b2;     /* OCEAN */
+    --base-color-neutral--black: #181a22;
+    --base-color-neutral--white: #ffffff;
+    --base-color-neutral--neutral-100: #f8f8fa;
+    --base-color-neutral--neutral-200: #edeef3;
+    --border-color--border-primary: #edeef3;
+
+    /* Button-005 System (aus Webflow "Global Styles" Komponente) */
+    --button-005-color: var(--base-color-neutral--white);
+    --button-005-color-hover: var(--base-color-neutral--white);
+    --button-005-color-background: var(--base-color-neutral--black);
+    --button-005-color-background-hover: linear-gradient(90deg, #F5B100 0%, #F6694E 50%, #D02879 100%);
+    /* Gradient an der 80%-Naht gesplittet (Text-Pill = 0–80%, Icon = 80–100%).
+       #DF4268 = Gradientfarbe bei 80%; der 50%-Stop liegt im Text bei 50/80 = 62.5%. */
+    --button-005-color-background-hover-text: linear-gradient(90deg, #F5B100 0%, #F6694E 62.5%, #DF4268 100%);
+    --button-005-color-background-hover-icon: linear-gradient(90deg, #DF4268 0%, #D02879 100%);
+    --button-005-color-focus: var(--base-color-neutral--black);
+    --button-005-border-width: 0.0625em;
+    --button-005-border-color: transparent;
+    --button-005-text-border-radius: 2.5em;
+    --button-005-icon-border-radius: 0.3em;
+    --button-005-padding-top: 0.75em;
+    --button-005-padding-bottom: 0.75em;
+    --button-005-padding-x: 1em;
+    --button-005-mirror-focus: 1;
+    --button-005-focus-inset: -0.125em;
+    --button-005-text-click-scale: 0.955 0.925;
+    --button-005-icon-click-scale: 0.925;
+    --button-005-ease-hover: cubic-bezier(0.32, 0.72, 0, 1);
+    --button-005-ease-click: cubic-bezier(0.4, 0, 0.2, 1);
+    --button-005-ease-focus: cubic-bezier(0.32, 0.72, 0, 1);
 }
 
 body {
@@ -511,7 +562,300 @@ body {
     overflow-x: auto;
 }
 
-/* Buttons */
+/* ============================================================
+   Button-005 System — 1:1 aus heyjobs-new.webflow.io
+   Markup: a.button-005 > __text-wrap (is--default / is--hover)
+                        > __icon-wrap (is--default / is--hover)
+   Varianten via Attribut: data-wf--button--variant="outline|arrow|link"
+   ============================================================ */
+
+.button-005 {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.0625em;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    line-height: 1;
+    text-decoration: none;
+    color: var(--button-005-color);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Varianten (identische Attribute wie in Webflow) */
+[data-wf--button--variant="outline"] {
+    --button-005-color: var(--base-color-neutral--black);
+    --button-005-color-background: transparent;
+    --button-005-border-color: var(--base-color-neutral--black);
+    --button-005-color-background-hover: var(--base-color-neutral--black);
+    --button-005-color-background-hover-text: initial;
+    --button-005-color-background-hover-icon: initial;
+}
+[data-wf--button--variant*="arrow"] {
+    --button-005-color: var(--base-color-neutral--black);
+    --button-005-color-background: var(--base-color-neutral--white);
+    --button-005-border-color: var(--border-color--border-primary);
+    --button-005-color-background-hover: var(--base-color-neutral--black);
+    --button-005-color-background-hover-text: initial;
+    --button-005-color-background-hover-icon: initial;
+}
+[data-wf--button--variant*="link"] {
+    --button-005-color: currentColor;
+    --button-005-color-hover: currentColor;
+    --button-005-color-background: transparent;
+    --button-005-border-color: transparent;
+    --button-005-color-background-hover: transparent;
+    --button-005-color-background-hover-text: initial;
+    --button-005-color-background-hover-icon: initial;
+    --button-005-padding-x: 0em;
+}
+
+.button-005__text-wrap {
+    pointer-events: none;
+    perspective: 10em;
+    display: grid;
+    transform-style: preserve-3d;
+}
+
+.button-005__text {
+    backface-visibility: hidden;
+    white-space: nowrap;
+    grid-area: 1 / 1;
+    padding: var(--button-005-padding-top) var(--button-005-padding-x) var(--button-005-padding-bottom);
+    background: var(--button-005-color-background);
+    border-radius: var(--button-005-text-border-radius);
+    transform-style: preserve-3d;
+}
+
+.button-005__icon-wrap {
+    aspect-ratio: 1 / 1;
+    pointer-events: none;
+    perspective: 10em;
+    width: calc(1em + var(--button-005-padding-top) + var(--button-005-padding-bottom));
+    display: grid;
+    flex-shrink: 0;
+    transform-style: preserve-3d;
+}
+
+.button-005__icon-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    border-radius: var(--button-005-icon-border-radius);
+    grid-area: 1 / 1;
+    background: var(--button-005-color-background);
+    transform-style: preserve-3d;
+}
+
+.button-005__icon {
+    width: 1em;
+    height: 1em;
+}
+
+/* Hover-Flip (nur Geräte mit echtem Hover, Reduced Motion respektiert) */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .button-005:is(:hover, :focus-visible) .button-005__text.is--default {
+        translate: 0 -15% 0;
+        rotate: 1 0 0 85deg;
+        scale: 0.55;
+        opacity: 0;
+        transition:
+            translate 0.5s 0.05s var(--button-005-ease-hover),
+            rotate 0.55s 0.05s var(--button-005-ease-hover),
+            scale 0.55s 0.05s var(--button-005-ease-hover),
+            opacity 0.1s 0.15s linear;
+    }
+    .button-005:is(:hover, :focus-visible) .button-005__text.is--hover {
+        translate: 0 0 0;
+        rotate: 1 0 0 0deg;
+        scale: 1;
+        opacity: 1;
+        transition:
+            translate 0.5s 0.1s var(--button-005-ease-hover),
+            rotate 0.55s 0.1s var(--button-005-ease-hover),
+            scale 0.55s 0.1s var(--button-005-ease-hover),
+            opacity 0.1s 0.075s linear;
+    }
+    .button-005:is(:hover, :focus-visible) .button-005__icon-inner.is--default {
+        translate: 0 15% 0;
+        rotate: 1 0 0 -85deg;
+        scale: 0.55;
+        opacity: 0;
+        transition:
+            translate 0.5s 0.05s var(--button-005-ease-hover),
+            rotate 0.55s 0.05s var(--button-005-ease-hover),
+            scale 0.55s 0.05s var(--button-005-ease-hover),
+            opacity 0.1s 0.15s linear;
+    }
+    .button-005:is(:hover, :focus-visible) .button-005__icon-inner.is--hover {
+        translate: 0 0 0;
+        rotate: 1 0 0 0deg;
+        scale: 1;
+        opacity: 1;
+        transition:
+            translate 0.5s 0.1s var(--button-005-ease-hover),
+            rotate 0.55s 0.1s var(--button-005-ease-hover),
+            scale 0.55s 0.1s var(--button-005-ease-hover),
+            opacity 0.1s 0.075s linear;
+    }
+}
+
+.button-005:is(:focus-visible)::after {
+    box-shadow: 0 0 0 0.125em var(--button-005-color-focus);
+}
+
+.button-005:active .button-005__icon-wrap { scale: var(--button-005-icon-click-scale); }
+.button-005:active .button-005__text-wrap { scale: var(--button-005-text-click-scale); }
+
+.button-005::after {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: var(--button-005-focus-inset);
+    border-radius: var(--button-005-text-border-radius) var(--button-005-icon-border-radius)
+        var(--button-005-icon-border-radius) var(--button-005-text-border-radius);
+    transition: box-shadow 0.3s var(--button-005-ease-focus);
+    pointer-events: none;
+    z-index: 1;
+    scale: var(--button-005-mirror-focus) 1;
+}
+
+.button-005__text-wrap,
+.button-005__icon-wrap {
+    transition: scale 0.15s var(--button-005-ease-click);
+}
+
+.button-005__text.is--default {
+    transform-origin: center top;
+    opacity: 1;
+    transition:
+        translate 0.4s 0.05s var(--button-005-ease-hover),
+        rotate 0.4s 0.05s var(--button-005-ease-hover),
+        scale 0.4s 0.05s var(--button-005-ease-hover),
+        opacity 0.1s 0.05s linear;
+}
+
+.button-005__text.is--hover {
+    transform-origin: center bottom;
+    translate: 0 15% 0;
+    rotate: 1 0 0 -85deg;
+    scale: 0.55;
+    opacity: 0;
+    background: var(--button-005-color-background-hover-text, var(--button-005-color-background-hover));
+    color: var(--button-005-color-hover);
+    transition:
+        translate 0.4s var(--button-005-ease-hover),
+        rotate 0.4s var(--button-005-ease-hover),
+        scale 0.4s var(--button-005-ease-hover),
+        opacity 0.1s 0.075s linear;
+}
+
+.button-005__icon-inner.is--default {
+    opacity: 1;
+    transform-origin: center bottom;
+    transition:
+        translate 0.4s 0.05s var(--button-005-ease-hover),
+        rotate 0.4s 0.05s var(--button-005-ease-hover),
+        scale 0.4s 0.05s var(--button-005-ease-hover),
+        opacity 0.1s 0.05s linear;
+}
+
+.button-005__icon-inner.is--hover {
+    transform-origin: center top;
+    translate: 0 -15% 0;
+    rotate: 1 0 0 85deg;
+    scale: 0.55;
+    opacity: 0;
+    background: var(--button-005-color-background-hover-icon, var(--button-005-color-background-hover));
+    color: var(--button-005-color-hover);
+    transition:
+        translate 0.4s var(--button-005-ease-hover),
+        rotate 0.4s var(--button-005-ease-hover),
+        scale 0.4s var(--button-005-ease-hover),
+        opacity 0.1s 0.075s linear;
+}
+
+.button-005__text,
+.button-005__icon-inner {
+    box-shadow: inset 0 0 0 var(--button-005-border-width) var(--button-005-border-color);
+}
+
+/* ============================================================
+   Scribbles — draw-line & draw-circle (Webflow-Konvention)
+   Markup: <span class="draw-line">Wort</span>
+           <span class="draw-circle">Wort</span>
+   Das SVG wird per JS injiziert (js/main.js), Stroke zeichnet
+   sich beim Scrollen ein. Stil nach Original: GOLD-Markerstrich.
+   ============================================================ */
+.draw-line,
+.draw-circle {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.draw-line svg,
+.draw-circle svg {
+    position: absolute;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.draw-line svg {
+    left: -1%;
+    bottom: -0.24em;
+    width: 102%;
+    height: 0.3em;
+}
+
+.draw-circle svg {
+    left: -13%;
+    top: -20%;
+    width: 126%;
+    height: 140%;
+}
+
+.draw-line svg path,
+.draw-circle svg path {
+    fill: none;
+    stroke: var(--gold);
+    stroke-width: 0.055em;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+}
+
+.draw-line.is-drawn svg path {
+    animation: scribble-draw 0.7s cubic-bezier(0.32, 0.72, 0, 1) 0.2s forwards;
+}
+
+.draw-circle.is-drawn svg path {
+    animation: scribble-draw 0.9s cubic-bezier(0.32, 0.72, 0, 1) 0.2s forwards;
+}
+
+@keyframes scribble-draw {
+    to { stroke-dashoffset: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .draw-line svg path,
+    .draw-circle svg path {
+        stroke-dashoffset: 0;
+        animation: none;
+    }
+}
+
+/* Legacy-Buttons (deprecated — nur noch für Abwärtskompatibilität) */
 .btn {
     font-family: var(--font-body);
     font-size: 16px;
@@ -949,4 +1293,67 @@ body {
 
 .code-value.copied {
     animation: copied 0.3s ease;
+}
+/* ============================================================
+   Jobster — Maskottchen-Sektion
+   ============================================================ */
+.jobster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.jobster-item {
+    background: var(--white);
+    border: 1px solid var(--gray-20);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1), box-shadow 0.3s ease;
+}
+
+.jobster-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(24, 26, 34, 0.12);
+}
+
+.jobster-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    background: var(--gray-100);
+    padding: var(--spacing-lg);
+}
+
+.jobster-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s cubic-bezier(0.35, 1.5, 0.6, 1); /* aa-ease-jump */
+}
+
+.jobster-item:hover .jobster-preview img {
+    transform: scale(1.06) rotate(-2deg);
+}
+
+.jobster-item h4 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 18px;
+    padding: var(--spacing-md) var(--spacing-md) var(--spacing-xs);
+}
+
+.jobster-item p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--gray-80);
+    padding: 0 var(--spacing-md) var(--spacing-md);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .jobster-item,
+    .jobster-preview img {
+        transition: none;
+    }
 }
